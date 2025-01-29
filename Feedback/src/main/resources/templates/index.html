@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Feedback Form</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <style>
+        .container{
+            width:100%;
+        }
+        h1{
+           margin-top:30px;
+           font-weight:bold;
+        }
+        button{
+            background-color: blue;
+            color: white;
+            border: none;
+            width: 100px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" align="center">
+        <h1>Feedback Form</h1><br>
+        <form action="/submitFeedback" method="post">
+            <label>Your Name: </label><br>
+            <input type="text" id="name" name="name"><br><br>
+            <label>Book Name: </label><br>
+            <input type="text" id="bookname" name="bookname"><br><br>
+            <label>Feedback: </label><br>
+            <textarea id="feedback" name="feedback" required></textarea><br><br>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+</body>
+</html>
